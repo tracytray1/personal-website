@@ -10,6 +10,7 @@
 
 html, body {
   background-color: #FAF3E6;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -89,13 +90,13 @@ h1 {
   display: flex;
 }
 
-#about-text h2 {
+#about-text h2, #competencies h2, #projects h2, #contact h2 {
   margin-bottom: -80px;
   font-size: 50px;
   font-family: 'Bebas Neue', sans serif;
 }
 
-#about-text h3 {
+#about-text h3, #competencies h3, #projects h3, #contact h3 {
   font-size: 50px;
   font-family: 'Anthonio Script', sans serif;
   color: #AA2B48;
@@ -115,22 +116,116 @@ h1 {
   font-style: normal;
 }
 
-.inclined-banner {
+.inclined-banner.red{
   width: 100%;
   height: 200px;
   background-color: #AA2B48;
-  clip-path: polygon(27% 0, 100% 0, 100% 68%, 0% 100%);
+  clip-path: polygon(47% 0, 100% 0, 100% 68%, 30% 100%);
   position: absolute;
   right: 0;
 }
 
 .container.quote {
   display: flex;
+  margin-bottom: 150px;
+}
+
+.container.quote.walsch{
   justify-content: flex-end;
 }
 
-#quote {
+.container.quote.gates {
+  justify-content: flex-start;
+}
+
+.quote {
   color: #FAF3E6;
   z-index: 1;
   font-family: 'Poppins', sans-serif;
+}
+
+.container.competencies {
+  display: flex;
+  gap: 50px
+}
+
+#languages, #tools {
+  width: 250px;
+  height: 300px;
+  border: solid 8px black;
+  color: #FAF3E6;
+  border-radius: 20px;
+}
+
+#languages h3, #tools h3 {
+font-family: 'Bebas Neue', sans-serif;
+}
+
+#languages ul, #tools ul {
+  font-family: 'Poppins', sans-serif;
+}
+
+#languages {
+  background-color:#AA2B48;
+}
+
+#tools {
+  background-color: #275752;
+}
+
+#competencies-columns{
+  display: flex;
+  gap: 100px;
+}
+
+.container.cv {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#cv {
+  background-color: #CCC6B9;
+  border: solid black 8px;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 0px 200px;
+}
+
+.inclined-banner.green {
+  width: 100%;
+  height: 200px;
+  background-color:#275752;
+  clip-path: polygon(0% 0, 47% 0, 68% 68%, 0% 50%);
+  position: absolute;
+  left: 0;
+}
+
+input {
+  border: none;
+  border-bottom: #AA2B48 solid 2px;
+  background-color: transparent;
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-family: 'Bebas Neue', sans-serif,
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 20px;
 }
