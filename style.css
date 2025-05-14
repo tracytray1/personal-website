@@ -11,6 +11,14 @@
 html, body {
   background-color: #FAF3E6;
   scroll-behavior: smooth;
+  height: 100%;
+  width: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0px 40px;
+  box-sizing: border-box;
 }
 
 header {
@@ -48,11 +56,12 @@ a {
   text-decoration: none;
 }
 
-.container #hero {
+#hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 h1 {
@@ -82,37 +91,44 @@ h1 {
   padding: 10px 10px;
 }
 
-.container.about {
-  margin-bottom: 50px;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-#about {
+.about {
   display: flex;
 }
 
-#about-text h2, #competencies h2, #projects h2, #contact h2 {
+.about h2, #competencies-section h2, .projects h2, .contact h2, .cv h2 {
   margin-bottom: -80px;
   font-size: 50px;
   font-family: 'Bebas Neue', sans serif;
 }
 
-#about-text h3, #competencies h3, #projects h3, #contact h3 {
+.cv h2, .cv p {
+  margin: 0%;
+  text-align: center;
+}
+
+.about h3, #competencies-section h3, .projects h3, .contact h3 {
   font-size: 50px;
   font-family: 'Anthonio Script', sans serif;
   color: #AA2B48;
+}
+
+.about p, #competencies-section p, .projects p, .contact p, .contact-content p, .cv p {
+  font-size: 18px;
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #about-text h4 {
   font-size: 20px;
   font-family: "poppins", sans-serif;
   font-weight: 600;
-  font-style: normal;
-}
-
-#about-text p {
-  font-size: 18px;
-  font-family: "poppins", sans-serif;
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -125,16 +141,16 @@ h1 {
   right: 0;
 }
 
-.container.quote {
+.quote {
   display: flex;
   margin-bottom: 150px;
 }
 
-.container.quote.walsch{
+.quote.walsch{
   justify-content: flex-end;
 }
 
-.container.quote.gates {
+.quote.gates {
   justify-content: flex-start;
 }
 
@@ -144,7 +160,7 @@ h1 {
   font-family: 'Poppins', sans-serif;
 }
 
-.container.competencies {
+.competencies {
   display: flex;
   gap: 50px
 }
@@ -159,6 +175,8 @@ h1 {
 
 #languages h3, #tools h3 {
 font-family: 'Bebas Neue', sans-serif;
+font-size: 25px;
+text-align: center;
 }
 
 #languages ul, #tools ul {
@@ -178,18 +196,18 @@ font-family: 'Bebas Neue', sans-serif;
   gap: 100px;
 }
 
-.container.cv {
+.cv {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+
 }
 
-#cv {
+.cv div {
   background-color: #CCC6B9;
   border: solid black 8px;
   border-radius: 20px;
-  width: fit-content;
-  padding: 0px 200px;
+  width: 100%;
 }
 
 .inclined-banner.green {
@@ -201,31 +219,32 @@ font-family: 'Bebas Neue', sans-serif;
   left: 0;
 }
 
-input {
-  border: none;
-  border-bottom: #AA2B48 solid 2px;
-  background-color: transparent;
-}
-
-.contact-content {
+#contact-content {
   display: flex;
   align-items: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-button {
-  border-radius: 10px;
-  padding: 10px 10px;
-  font-family: 'Bebas Neue', sans-serif,
 }
 
 .projects-list {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   gap: 20px;
+}
+
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  border-bottom: #AA2B48 solid 2px;
+  background-color: transparent;
+}
+
+button {
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-family: 'Bebas Neue', sans-serif,
 }
