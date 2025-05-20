@@ -21,6 +21,8 @@ body {
   box-sizing: border-box;
 }
 
+/* Header */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -97,40 +99,41 @@ h1 {
   margin: auto;
 }
 
+/* About section */
+
 .about {
   display: flex;
+  flex-direction: column;
+
 }
 
-.about h2, #competencies-section h2, .projects h2, .contact h2, .cv h2 {
+.about-header h2, .competencies-header h2, .projects-header h2, .contact-header h2, .cv h2 {
   margin-bottom: -80px;
   font-size: 50px;
   font-family: 'Bebas Neue', sans serif;
 }
 
-.cv h2, .cv p {
-  margin: 0%;
-  text-align: center;
-}
-
-.about h3, #competencies-section h3, .projects h3, .contact h3 {
+.about h3, .competencies-header h3, .projects h3, .contact h3 {
   font-size: 50px;
   font-family: 'Anthonio Script', sans serif;
   color: #AA2B48;
 }
 
-.about p, #competencies-section p, .projects p, .contact p, .contact-content p, .cv p {
+.about p, .projects p, .contact p, .contact-content p, .cv p {
   font-size: 18px;
   font-family: "poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-#about-text h4 {
+.about-text h4 {
   font-size: 20px;
   font-family: "poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
+
+/* Quote sections */
 
 .inclined-banner.red{
   width: 100%;
@@ -141,9 +144,21 @@ h1 {
   right: 0;
 }
 
+.inclined-banner.green {
+  width: 100%;
+  height: 200px;
+  background-color: #275752;
+  clip-path: polygon(0% 0, 47% 0, 68% 68%, 0% 50%);
+  position: absolute;
+  left: 0;
+}
+
 .quote {
   display: flex;
   margin-bottom: 150px;
+  color: #FAF3E6;
+  z-index: 1;
+  font-family: 'Poppins', sans-serif;
 }
 
 .quote.walsch{
@@ -154,11 +169,7 @@ h1 {
   justify-content: flex-start;
 }
 
-.quote {
-  color: #FAF3E6;
-  z-index: 1;
-  font-family: 'Poppins', sans-serif;
-}
+/* Competencies */
 
 .competencies {
   display: flex;
@@ -196,11 +207,12 @@ text-align: center;
   gap: 100px;
 }
 
+/* CV */
+
 .cv {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-
 }
 
 .cv div {
@@ -210,28 +222,45 @@ text-align: center;
   width: 100%;
 }
 
-.inclined-banner.green {
-  width: 100%;
-  height: 200px;
-  background-color:#275752;
-  clip-path: polygon(0% 0, 47% 0, 68% 68%, 0% 50%);
-  position: absolute;
-  left: 0;
+.cv h2, .cv p {
+  margin: 0%;
+  text-align: center;
 }
 
-#contact-content {
-  display: flex;
-  align-items: center;
-}
-
+/* Projects section */
 .projects-list {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   gap: 20px;
 }
 
+.project-image img {
+  width: 300px;
+  border-radius: 20px;
+}
 
-/* Form */
+.cta {
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans serif;
+  text-align: bottom;
+}
+
+.cta :hover{
+  width: 100px;
+  height: 50px;
+  background: red;
+}
+
+
+/* Contact section */
+
+#contact-content {
+  display: flex;
+  align-items: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
