@@ -104,7 +104,6 @@ h1 {
 .about {
   display: flex;
   flex-direction: column;
-
 }
 
 .about-header h2, .competencies-header h2, .projects-header h2, .contact-header h2, .cv h2 {
@@ -142,6 +141,7 @@ h1 {
   clip-path: polygon(47% 0, 100% 0, 100% 68%, 30% 100%);
   position: absolute;
   right: 0;
+  z-index: -1;
 }
 
 .inclined-banner.green {
@@ -151,13 +151,20 @@ h1 {
   clip-path: polygon(0% 0, 47% 0, 68% 68%, 0% 50%);
   position: absolute;
   left: 0;
+  z-index: -1;
 }
 
 .quote {
   display: flex;
-  margin-bottom: 150px;
+  margin-bottom: 200px;
+}
+
+.quote-content {
+  display: flex;
+}
+
+.quote-content div p{
   color: #FAF3E6;
-  z-index: 1;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -227,11 +234,27 @@ text-align: center;
   text-align: center;
 }
 
+
 /* Projects section */
+
 .projects-list {
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  grid-template-columns: 1fr;
   gap: 20px;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .project-image img {
@@ -247,10 +270,16 @@ text-align: center;
   text-align: bottom;
 }
 
-.cta :hover{
-  width: 100px;
-  height: 50px;
-  background: red;
+.cta a {
+  box-shadow: inset 0 0 0 0 #AA2B48;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.cta a :hover{
+  box-shadow: inset 100px 0 0 0 #AA2B48;
+  color: white;
 }
 
 
