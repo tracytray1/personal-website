@@ -16,14 +16,14 @@
       <p id="initials">TK</p>
       <p>Tracy Kabuya</p>
     </div>
-    <div id="menu">
+    <nav id="menu">
       <ul>
         <li><a href="#about">about</a></li>
         <li><a href="#competencies">competencies</a></li>
         <li><a href="#projects">portfolio</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
   <div class="container">
@@ -34,138 +34,189 @@
     </div>
   </div>
 
-  <div class="container about">
-    <div id="about">
-      <div id="about-text">
-        <h2>About Me</h2>
-        <h3>hello world</h3>
-        <h4>A curiosity-driven Front-End Developer</h4>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-        Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-      </div>
-      <div id="image">
-        <img src="https://images.pexels.com/photos/4926699/pexels-photo-4926699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="portrait" width="50px">
-      </div>
+  <main>
+    <div class="container">
+      <section class="about">
+        <div class="about-header">
+          <h2>About Me</h2>
+          <h3>hello world</h3>
+        </div>
+        <div class="about-text">
+          <h4>A curiosity-driven Front-End Developer</h4>
+          <p><b>From SEO to web development, there is only one leap of faith... and a lot of code.</b>
+          After working six years as a SEO Content Manager in a field where intuition and hypotheses often lead the way, I felt the urge to go from a domain where hypotheses are kings and queens, to a domain more certain, where
+          one can bring solutions to problems : web development.</p>
+        </div>
+      </section>
     </div>
-  </div>
 
-  <div class="container quote walsch">
-    <div class="quote walsch">
-      <p>"Life begins outside of your comfort zone."</p>
-      <p>Neale Donald Walsch</p>
-    </div>
-    <div class="inclined-banner red"></div>
-  </div>
-
-  <div class="container competencies">
-    <div id="competencies">
-      <h2>Competencies</h2>
-      <h3>dev skills</h3>
-    </div>
-    <div id="competencies-columns">
-      <div id="languages">
-        <h3>Programming languages</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React.js</li>
-          <li>Ruby On Rails</li>
-          <li>SQL</li>
-        </ul>
-      </div>
-      <div id="tools">
-        <h3>Tools and tech</h3>
-        <ul>
-          <li>Figma</li>
-          <li>Visual Studio Code</li>
-          <li>Canva</li>
-          <li>Git</li>
-          <li>GitHub</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="container cv">
-    <div id="cv">
-      <h2>Decode my path</h2>
-      <p>Learn more about my background in my CV</p>
-    </div>
-  </div>
-
-  <div class="container projects">
-    <div id="projects">
-      <div>
-        <h2>Projects</h2>
-        <h3>Built with love</h3>
-      </div>
-      <div class="projects-list">
-        <div>
-          <img src="website.jpg" alt="" width="200px">
-        </div>
-        <div>
-          <p>Far far away, behind the word mountains, far from the countries
-          Vokalia and Consonantia, there live the blind texts.</p>
-        </div>
-        <div>
-          <p>Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.</p>
-        </div>
-        <div>
-          <img src="website.jpg" alt="" width="200px">
-        </div>
-        <div>
-          <img src="website.jpg" alt="" width="200px">
-        </div>
-        <div>
-          <p>Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.</p>
-        </div>
-        <div>
-          <p>Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.</p>
-        </div>
-        <div>
-          <img src="website.jpg" alt="" width="200px">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container quote gates">
-    <div class="quote gates">
-      <p>“Learning to write programs stretches your mind.”</p>
-      <p>Bill Gates</p>
-    </div>
-    <div class="inclined-banner green"></div>
-  </div>
-
-  <div class="container contact">
-    <div class="contact-form-section">
-      <div id="contact">
-        <h2>Contact</h2>
-        <h3>Get in touch</h3>
-      </div>
-      <div class="contact-content">
-        <div class="form-wrapper">
+    <div class="container">
+      <section class="quote walsch">
+        <div class="quote-content">
           <div>
-            <form action="" method="post">
-              <input type="text" placeholder="Name" id="name" required>
-              <input type="email" placeholder="Email" id="email" required>
-              <input type="text" placeholder="Message" id="message" required>
-            </form>
+            <p>"Life begins outside of your comfort zone."</p>
+            <p>Neale Donald Walsch</p>
           </div>
-          <div>
-            <button type="submit">Send Email</button>
+          <div class="inclined-banner red"></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="competencies">
+        <div class="competencies-header">
+          <h2>Competencies</h2>
+          <h3>dev skills</h3>
+        </div>
+        <div id="competencies-columns">
+          <div id="languages">
+            <h3>Programming languages</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Ruby On Rails</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div id="tools">
+            <h3>Tools and tech</h3>
+            <ul>
+              <li>Figma</li>
+              <li>Visual Studio Code</li>
+              <li>Canva</li>
+              <li>Git</li>
+              <li>GitHub</li>
+            </ul>
           </div>
         </div>
-        <div class="contact-social-section">
-          <p>Feeling social ? Find me on these online spaces too!</p>
-        </div>
-      </div>
+      </section>
     </div>
-  </div>
 
+    <div class="container">
+      <section class="cv">
+        <div class="cv-header">
+          <h2>Decode my path</h2>
+          <p>Learn more about my background in my CV</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="projects">
+        <div class="projects-header">
+          <h2>Projects</h2>
+          <h3>Built with love</h3>
+        </div>
+        <div class="projects-list">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="website.jpg" alt="">
+            </div>
+            <div class="project-description">
+              <div>
+                <p>Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+              <div class="cta">
+                <a href="#">See live</a>
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-description">
+              <div>
+                <p>Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+              <div class="cta">
+                <a href="#">See live</a>
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+            <div class="project-image">
+              <img src="website.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="website.jpg" alt="">
+            </div>
+            <div class="project-description">
+              <div>
+                <p>Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+              <div class="cta">
+                <a href="#">See live</a>
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-description">
+              <div>
+                <p>Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+              <div class="cta">
+                <a href="#">See live</a>
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+            <div class="project-image">
+              <img src="website.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="quote gates">
+        <div class="quote-content">
+          <div>
+            <p>“Learning to write programs stretches your mind.”</p>
+            <p>Bill Gates</p>
+          </div>
+          <div class="inclined-banner green"></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="contact-form-section">
+        <div class="contact-header">
+          <h2>Contact</h2>
+          <h3>Get in touch</h3>
+        </div>
+        <div id="contact-content">
+          <div class="form-wrapper">
+            <div>
+              <form action="" method="post">
+                <label for="contact-name">Name</label>
+                <input type="text" name="name" placeholder="Enter your name here" id="contact-name" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Email" id="email" required>
+                <label for="message">Message</label>
+                <textarea name="message" placeholder="Message" id="message" required></textarea>
+              </form>
+            </div>
+            <div>
+              <button type="submit">Send Email</button>
+            </div>
+          </div>
+          <div class="contact-social-section">
+            <p>Feeling social ? Find me on these online spaces too!</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 </body>
 </html>

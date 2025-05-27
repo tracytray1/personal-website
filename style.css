@@ -11,7 +11,17 @@
 html, body {
   background-color: #FAF3E6;
   scroll-behavior: smooth;
+  height: 100%;
+  width: auto;
 }
+
+body {
+  margin: 0;
+  padding: 0px 40px;
+  box-sizing: border-box;
+}
+
+/* Header */
 
 header {
   display: flex;
@@ -48,11 +58,12 @@ a {
   text-decoration: none;
 }
 
-.container #hero {
+#hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 h1 {
@@ -82,39 +93,46 @@ h1 {
   padding: 10px 10px;
 }
 
-.container.about {
-  margin-bottom: 50px;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-#about {
+/* About section */
+
+.about {
   display: flex;
+  flex-direction: column;
 }
 
-#about-text h2, #competencies h2, #projects h2, #contact h2 {
+.about-header h2, .competencies-header h2, .projects-header h2, .contact-header h2, .cv h2 {
   margin-bottom: -80px;
   font-size: 50px;
   font-family: 'Bebas Neue', sans serif;
 }
 
-#about-text h3, #competencies h3, #projects h3, #contact h3 {
+.about h3, .competencies-header h3, .projects h3, .contact h3 {
   font-size: 50px;
   font-family: 'Anthonio Script', sans serif;
   color: #AA2B48;
 }
 
-#about-text h4 {
+.about p, .projects p, .contact p, .contact-content p, .cv p {
+  font-size: 18px;
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-text h4 {
   font-size: 20px;
   font-family: "poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
-#about-text p {
-  font-size: 18px;
-  font-family: "poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+/* Quote sections */
 
 .inclined-banner.red{
   width: 100%;
@@ -123,28 +141,44 @@ h1 {
   clip-path: polygon(47% 0, 100% 0, 100% 68%, 30% 100%);
   position: absolute;
   right: 0;
+  z-index: -1;
 }
 
-.container.quote {
-  display: flex;
-  margin-bottom: 150px;
-}
-
-.container.quote.walsch{
-  justify-content: flex-end;
-}
-
-.container.quote.gates {
-  justify-content: flex-start;
+.inclined-banner.green {
+  width: 100%;
+  height: 200px;
+  background-color: #275752;
+  clip-path: polygon(0% 0, 47% 0, 68% 68%, 0% 50%);
+  position: absolute;
+  left: 0;
+  z-index: -1;
 }
 
 .quote {
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.quote-content {
+  display: flex;
+}
+
+.quote-content div p{
   color: #FAF3E6;
-  z-index: 1;
   font-family: 'Poppins', sans-serif;
 }
 
-.container.competencies {
+.quote.walsch{
+  justify-content: flex-end;
+}
+
+.quote.gates {
+  justify-content: flex-start;
+}
+
+/* Competencies */
+
+.competencies {
   display: flex;
   gap: 50px
 }
@@ -159,6 +193,8 @@ h1 {
 
 #languages h3, #tools h3 {
 font-family: 'Bebas Neue', sans-serif;
+font-size: 25px;
+text-align: center;
 }
 
 #languages ul, #tools ul {
@@ -178,27 +214,85 @@ font-family: 'Bebas Neue', sans-serif;
   gap: 100px;
 }
 
-.container.cv {
+/* CV */
+
+.cv {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-#cv {
+.cv div {
   background-color: #CCC6B9;
   border: solid black 8px;
   border-radius: 20px;
-  width: fit-content;
-  padding: 0px 200px;
+  width: 100%;
 }
 
-.inclined-banner.green {
-  width: 100%;
-  height: 200px;
-  background-color:#275752;
-  clip-path: polygon(0% 0, 47% 0, 68% 68%, 0% 50%);
-  position: absolute;
-  left: 0;
+.cv h2, .cv p {
+  margin: 0%;
+  text-align: center;
+}
+
+
+/* Projects section */
+
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.project-image img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.cta {
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans serif;
+  text-align: bottom;
+}
+
+.cta a {
+  box-shadow: inset 0 0 0 0 #AA2B48;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.cta a :hover{
+  box-shadow: inset 100px 0 0 0 #AA2B48;
+  color: white;
+}
+
+
+/* Contact section */
+
+#contact-content {
+  display: flex;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -207,25 +301,8 @@ input {
   background-color: transparent;
 }
 
-.contact-content {
-  display: flex;
-  align-items: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
 button {
   border-radius: 10px;
   padding: 10px 10px;
   font-family: 'Bebas Neue', sans-serif,
-}
-
-.projects-list {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 20px;
 }
