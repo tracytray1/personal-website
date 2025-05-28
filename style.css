@@ -66,6 +66,29 @@ a {
   height: 100vh;
 }
 
+.hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.jumplink {
+  color: white;
+  padding: 5px 20px;
+  border-radius: 7px;
+}
+
+.jumplink.projects {
+  background-color: #AA2B48;
+
+}
+
+.jumplink.contact {
+  background-color: #AA2B48;
+  color:white;
+}
+
 h1 {
   font-family:'Anthonio Script';
   font-size: 160px;
@@ -80,7 +103,7 @@ h1 {
   margin-bottom: -50px;
 }
 
-#hero p {
+.job-title {
   font-family: 'Bebas Neue Book', sans-serif;
   font-size: 50px;
   background-color: #CCC6B9;
