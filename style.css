@@ -9,7 +9,7 @@
 }
 
 html, body {
-  background-color: #FAF3E6;
+  background-color: #F5F3F1;
   scroll-behavior: smooth;
   height: 100%;
   width: auto;
@@ -21,6 +21,37 @@ body {
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
+  cursor: pointer;
+  min-width: 150px;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary-button {
+  background-color: #E5D6C7;
+}
+
+.primary-button:hover {
+  background-color: #F0E6DC;
+  transform: scale(1.02);
+}
+
+.secondary-button {
+ background-color: transparent;
+ border: solid 1px #c4b5a5;
+
+}
+
+.secondary-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.02);
+}
+
 /* Header */
 
 header {
@@ -30,25 +61,21 @@ header {
   font-weight: 300;
   font-style: normal;
   align-items: center;
+  margin-bottom: 20px;
+  border-bottom: solid 1px rgb(222, 222, 222);
 }
 
 #name {
   display: flex;
-  gap: 20px;
   align-items: center;
 }
 
-#initials {
-  color: white;
-  background-color: #AA2B48;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#name img {
+  height: auto;
+  width: 90px;
 }
 
-#menu ul {
+.menu ul {
   display: flex;
   list-style: none;
   gap: 50px;
@@ -56,21 +83,89 @@ header {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+.menu-link  {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-link::after, .menu-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  bottom: -5px;
+  transform: scaleX(0);
+  left: 0;
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.menu-link:hover::after,
+.menu-link:hover::before {
+  transform: scaleX(1);
+}
+
+.menu-link::before {
+  top: -5px;
+  transform-origin: left;
 }
 
 #hero {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
 
-.hero-cta {
+.hero-buttons{
   display: flex;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.hero-image img {
+  max-width: 500px;
+  height: auto;
+}
+
+.hero-title, .hero-greeting {
+  font-family: 'Poppins';
+}
+
+.hero-title {
+  size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  padding-top: 20px;
+}
+
+.icon {
+  width: 30px;
+  height: auto;
+  fill: #E5D6C7;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  fill: #c4b5a5;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 100px;
 }
 
 .jumplink {
@@ -90,18 +185,14 @@ a {
 }
 
 h1 {
-  font-family:'Anthonio Script';
-  font-size: 160px;
-  color: #AA2B48;
-  margin-bottom: -180px;
-  z-index: 2;
+  font-family:'Poppins';
+  font-size: 40px;
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-#hero h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 150px;
-  margin-bottom: -50px;
-}
+
 
 .job-title {
   font-family: 'Bebas Neue Book', sans-serif;
@@ -322,10 +413,4 @@ input {
   border: none;
   border-bottom: #AA2B48 solid 2px;
   background-color: transparent;
-}
-
-button {
-  border-radius: 10px;
-  padding: 10px 10px;
-  font-family: 'Bebas Neue', sans-serif,
 }
