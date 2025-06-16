@@ -21,12 +21,17 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  font-size: 16px;
+  font-family: 'Poppins';
+}
+
 button {
   border: none;
   border-radius: 10px;
   padding: 10px 10px;
   font-family: 'Poppins', sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   cursor: pointer;
   min-width: 150px;
   transition: all 0.3s ease-in-out;
@@ -63,6 +68,14 @@ header {
   align-items: center;
   margin-bottom: 20px;
   border-bottom: solid 1px rgb(222, 222, 222);
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0px;
 }
 
 #name {
@@ -137,8 +150,11 @@ a {
 }
 
 .hero-title {
-  size: 1rem;
+  font-size: 28px;
+  margin-top: 0px;
 }
+
+
 
 .social-icons {
   display: flex;
@@ -168,6 +184,10 @@ a {
   padding-left: 100px;
 }
 
+.hero-callout {
+  font-family: 'Montserrat';
+}
+
 .jumplink {
   color: white;
   padding: 5px 20px;
@@ -185,32 +205,25 @@ a {
 }
 
 h1 {
-  font-family:'Poppins';
-  font-size: 40px;
-  color: black;
+  font-family: 'Anthonio Script', sans serif;
+  font-size: 70px;
+  color: #c4b5a5;
   margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-
-
-.job-title {
-  font-family: 'Bebas Neue Book', sans-serif;
-  font-size: 50px;
-  background-color: #CCC6B9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid 1px black;
-  border-radius: 8px;
-  width: fit-content;
-  padding: 10px 10px;
+  margin-bottom: 5px;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+}
+
+.hero-quote {
+  font-family: 'Anthonio Script', sans-serif;
+  font-size: 80px;
+  color: #c4b5a5;
+  max-width: 400px;
+  text-align: center;
 }
 
 /* About section */
@@ -221,187 +234,163 @@ h1 {
 }
 
 .about-header h2, .competencies-header h2, .projects-header h2, .contact-header h2, .cv h2 {
-  margin-bottom: -80px;
-  font-size: 50px;
-  font-family: 'Bebas Neue', sans serif;
+  margin-bottom: -30px;
+  font-size: 40px;
+  font-family: 'Poppins', sans serif;
+  font-weight: lighter;
 }
 
-.about h3, .competencies-header h3, .projects h3, .contact h3 {
+.about h3, .competencies-header h3, .projects-header h3, .contact-header h3 {
   font-size: 50px;
   font-family: 'Anthonio Script', sans serif;
-  color: #AA2B48;
+  color: #c4b5a5;
+  margin: 0px;
+  padding-left: 35px;
 }
 
 .about p, .projects p, .contact p, .contact-content p, .cv p {
-  font-size: 18px;
   font-family: "poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.about-text h4 {
-  font-size: 20px;
-  font-family: "poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-/* Quote sections */
-
-.inclined-banner.red{
-  width: 100%;
-  height: 200px;
-  background-color: #AA2B48;
-  clip-path: polygon(47% 0, 100% 0, 100% 68%, 30% 100%);
-  position: absolute;
-  right: 0;
-  z-index: -1;
-}
-
-.inclined-banner.green {
-  width: 100%;
-  height: 200px;
-  background-color: #275752;
-  clip-path: polygon(0% 0, 47% 0, 68% 68%, 0% 50%);
-  position: absolute;
-  left: 0;
-  z-index: -1;
-}
-
-.quote {
+.about-content {
   display: flex;
-  margin-bottom: 200px;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.quote-content {
-  display: flex;
-}
-
-.quote-content div p{
-  color: #FAF3E6;
-  font-family: 'Poppins', sans-serif;
-}
-
-.quote.walsch{
-  justify-content: flex-end;
-}
-
-.quote.gates {
-  justify-content: flex-start;
+.about-image img {
+  max-width: 500px;
+  height: auto;
 }
 
 /* Competencies */
 
-.competencies {
+#competencies-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr) ;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  border: solid 2px #c4b5a5;
+  border-radius: 10px;
+  padding: 24px;
+  font-family: 'Poppins';
+  background-color: whitesmoke;
+}
+
+.card svg {
+  width: 20px;
+  fill: #c4b5a5;
+}
+
+.card-header {
   display: flex;
-  gap: 50px
+  gap: 15px;
+  align-items: center;
 }
 
-#languages, #tools {
-  width: 250px;
-  height: 300px;
-  border: solid 8px black;
-  color: #FAF3E6;
-  border-radius: 20px;
-}
-
-#languages h3, #tools h3 {
-font-family: 'Bebas Neue', sans-serif;
-font-size: 25px;
-text-align: center;
-}
-
-#languages ul, #tools ul {
-  font-family: 'Poppins', sans-serif;
-}
-
-#languages {
-  background-color:#AA2B48;
-}
-
-#tools {
-  background-color: #275752;
-}
-
-#competencies-columns{
+.skills-list{
   display: flex;
-  gap: 100px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-/* CV */
-
-.cv {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+.skills-list li {
+  border: solid 1px #c4b5a5;
+  border-radius: 15px;
+  padding: 3px 10px;
 }
-
-.cv div {
-  background-color: #CCC6B9;
-  border: solid black 8px;
-  border-radius: 20px;
-  width: 100%;
-}
-
-.cv h2, .cv p {
-  margin: 0%;
-  text-align: center;
-}
-
 
 /* Projects section */
 
 .projects-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-top: 20px;
 }
 
 .project-card {
-  display: flex;
-  align-items: center;
+  font-family: 'Poppins';
+  border-radius: 20px;
   gap: 20px;
   padding-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  .project-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  border: solid 2px #CCC6B9;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.039) 0px 4px 12px;
+  background-color: whitesmoke;
 }
 
 .project-image img {
-  width: 300px;
-  border-radius: 20px;
+  width: 100%;
+}
+
+.project-description {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .cta {
   display: flex;
   gap: 20px;
-  text-transform: uppercase;
-  font-family: 'Bebas Neue', sans serif;
-  text-align: bottom;
+  font-family: 'Poppins', sans serif;
+  align-items: center;
+  padding-top: 10px;
 }
 
 .cta a {
-  box-shadow: inset 0 0 0 0 #AA2B48;
-  margin: 0 -.25rem;
-  padding: 0 .25rem;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: solid 1px rgb(212, 212, 212);
+  border-radius: 10px;
+  padding: 5px 10px;
 }
 
-.cta a :hover{
-  box-shadow: inset 100px 0 0 0 #AA2B48;
-  color: white;
+.cta .icon {
+  fill: black;
 }
 
+.project-tech .skills-list li {
+  color: #c4b5a5 ;
+  background-color: #e3dcd45e;
+  border-radius: 15px;
+  padding: 3px 10px;
+  border: none;
+}
 
 /* Contact section */
 
 #contact-content {
-  display: flex;
+  display: grid;
   align-items: center;
+  grid-template-columns: 1fr 250px;
+  gap: 20px;
+  font-family: 'Poppins';
+  border-radius: 20px;
+  padding-top: 30px;
+}
+
+textarea {
+  border-radius: 6px;
+}
+
+.form-fields-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 
 form {
@@ -409,8 +398,9 @@ form {
   flex-direction: column;
 }
 
-input {
-  border: none;
-  border-bottom: #AA2B48 solid 2px;
-  background-color: transparent;
+.form-wrapper {
+  background-color: whitesmoke;
+  padding: 30px;
+  border: #e1e1e1 solid 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
 }
