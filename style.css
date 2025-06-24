@@ -542,6 +542,8 @@ h1 {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins';
   border-radius: 20px;
   gap: 20px;
@@ -574,6 +576,9 @@ h1 {
 .project-description {
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .cta {
@@ -582,6 +587,7 @@ h1 {
   font-family: 'Poppins', sans-serif;
   align-items: center;
   padding-top: 10px;
+  margin-top: auto;
 }
 
 .cta a {
