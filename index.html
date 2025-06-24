@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="font-awesome" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
 
@@ -26,12 +27,26 @@
       </ul>
     </nav>
     <button class="primary-button"><a href="mailto:tracykabuya@gmail.com">Let's talk</a></button>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="mobile-menu">
+      <ul class="menu-list-mobile">
+        <li class="menu-link-mobile"><a href="#about">about</a></li>
+        <li class="menu-link-mobile"><a href="#competencies">competencies</a></li>
+        <li class="menu-link-mobile"><a href="#projects">projects</a></li>
+      </ul>
+      <button class="primary-button">
+        <a href="mailto:tracykabuya@gmail.com">Let's talk</a>
+      </button>
     </div>
   </header>
 
   <div class="container">
     <div id="hero">
-
       <div class="hero-image">
         <h2 class="hero-quote">"Build. Test. Break. Learn."</h2>
       </div>
@@ -79,8 +94,8 @@
   </div>
 
   <main>
-    <div class="container">
-      <section class="about">
+    <div class="container animate__animated">
+      <section id="about">
         <div class="about-header">
           <h2>about me.</h2>
           <h3>hello world</h3>
@@ -98,7 +113,7 @@
       </section>
     </div>
 
-    <div class="container">
+    <div class="container animate__animated">
       <section id="competencies">
         <div class="competencies-header">
           <h2>competencies.</h2>
@@ -215,7 +230,7 @@
       </section>
     </div>
 
-    <div class="container">
+    <div class="container animate__animated">
       <section id="projects">
         <div class="projects-header">
           <h2>Projects</h2>
@@ -434,16 +449,30 @@
 
 
 
-    <div class="container">
+    <div class="container animate__animated">
       <section class="contact-form-section">
         <div class="contact-header">
           <h2>contact.</h2>
           <h3>Get in touch</h3>
         </div>
         <div id="contact-content">
+          <div class="contact-social-section">
+            <div class="social-icons">
+              <img src="https://img.icons8.com/ios-filled/50/linkedin-circled--v1.png" alt="linkedin-circled--v1" />
+              <p>in/tkabuya</p>
+            </div>
+            <div class="social-icons">
+              <img src="images/dev-icon.png" alt="dev-new" width="50px"/>
+              <p>tracy_tray</p>
+            </div>
+            <div class="social-icons">
+              <img src="https://img.icons8.com/ios-filled/50/secured-letter--v1.png" alt="secured-letter--v1">
+              <p>tracykabuya@gmail.com</p>
+            </div>
+          </div>
           <div class="form-wrapper">
             <div>
-              <form action="" method="post">
+              <form action="mailto:tracykabuya@gmail.com" method="post" enctype="text/plain" onsubmit="myFunction()">
                 <div class="form-fields-group">
                   <div class="form-field">
                     <label for="contact-name">Your Name</label>
@@ -462,23 +491,16 @@
                   <label for="message">Message</label>
                   <textarea name="message" placeholder="Your message here" id="message" required></textarea>
                 </div>
+                <div class="form-submit">
+                  <button type="submit" class="primary-button">Send Email</button>
+                </div>
               </form>
             </div>
-            <div class="form-submit">
-              <button type="submit" class="primary-button">Send Email</button>
-            </div>
-          </div>
-          <div class="contact-social-section">
-            <p>Connect with me</p>
-            <img src="https://img.icons8.com/ios-filled/50/linkedin-circled--v1.png"
-                          alt="linkedin-circled--v1" />
-                        <img src="https://img.icons8.com/ios-filled/50/medium-new.png" alt="medium-new" />
-                        <img src="https://img.icons8.com/ios-filled/50/secured-letter--v1.png"
-                          alt="secured-letter--v1" />
           </div>
         </div>
       </section>
     </div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
