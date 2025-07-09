@@ -27,7 +27,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Select all elements with animate__animated class
   const animatedElements = document.querySelectorAll('.animate__animated');
   animatedElements.forEach(element => {
     element.style.opacity = 0; // Start hidden for effect
